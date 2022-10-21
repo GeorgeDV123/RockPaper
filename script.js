@@ -22,5 +22,10 @@ function playerChoice(playerSelection) {
     console.log(playerSelection)
 }
 
-playerChoice(parseInt(prompt("Enter 1 for Rock, 2 for paper, 3 for scissors")))
+function theGame(ComputerSelection, playerSelection) {
+    
+}
+
+
+playerChoice(parseInt(prompt("Enter 1 for Rock, 2 for paper, 3 for scissors")));
 getComputerChoice(Math.floor(Math.random() * 3));
