@@ -1,7 +1,5 @@
 function getComputerChoice(ComputerSelection) {
 
-    ComputerSelection = (Math.floor(Math.random() * 3));
-
     if (ComputerSelection == 0)
         return ("rock");
     if (ComputerSelection == 1)
@@ -9,28 +7,34 @@ function getComputerChoice(ComputerSelection) {
     if (ComputerSelection == 2)
         return ("scissors");
 
-    console.log(ComputerSelection);
 }
 
-function playerChoice(playerSelection) {
+function playRound(playerSelection, ComputerSelection) {
+    ComputerSelection = getComputerChoice(Math.floor(Math.random() * 3));
+    playerSelection = (prompt("Enter rock, paper or scissors"));
 
-    if (playerSelection == 0)
-        return ("rock");
-    if (playerSelection == 1)
-        return ("paper");
-    if (playerSelection == 2)
-        return ("scissors")
+    if (ComputerSelection == playerSelection)
+        return ("Draw")
+    else if (ComputerSelection == "rock") 
+        if (playerSelection == "paper")
+            return ("You Win")
+    else if (ComputerSelection == "paper")
+        if (playerSelection == "scissors")
+            return ("You Win")
+    else if (ComputerSelection == "scissors")
+        if (playerSelection == "rock")
+            return ("You Win")
+    else if (ComputerSelection == "scissors") 
+        if (playerSelection == "paper")
+            return ("You Lose")
+    else if (ComputerSelection == "paper")
+        if (playerSelection == "rock")
+            return ("You Lose")
+    else if (ComputerSelection == "rock")
+        if (playerSelection == "scissors")
+            return ("You Lose")
 
-    console.log(playerSelection)
 }
 
-function theGame(ComputerSelection, playerSelection) {
-    
-}
-
-playerChoice(parseInt(prompt("Enter 0 for Rock, 1 for paper, 2 for scissors")));
-getComputerChoice(Math.floor(Math.random() * 3));
-const ComputerSelection = getComputerChoice();
-const playerSelection = playerChoice(parseInt(prompt("Enter 0 for Rock, 1 for paper, 2 for scissors")));
-
+playRound()
 
