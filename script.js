@@ -9,7 +9,7 @@ function g1etComputerChoice(x) {
     
 }
 
-function playRound() {
+function playRound1() {
    let ComputerSelection = getComputerChoice(Math.floor(Math.random() * 3));
    let playerSelection = (prompt("Enter rock, paper or scissors"));
 
@@ -30,13 +30,13 @@ function playRound() {
     else if (ComputerSelection == "paper")
         if (playerSelection == "rock")
             return ("You Lose");
-    else if (ComputerSelection == "rock")
+    else (ComputerSelection == "rock")
         if (playerSelection == "scissors")
             return ("You Lose");
 
 }
 
-function playGame(x, y) {
+function playGame1(x, y) {
     for (let i = 0; i < 5; i++) {
         if (playRound() = "You Win")
             x = x++;
