@@ -7,7 +7,8 @@ function getComputerChoice(input) {
 
 function playRound(playerSelection, computerSelection) {
     computerSelection = getComputerChoice(array)
-    playerSelection = (prompt("enter"))
+    let z = (prompt("Enter rock, paper or scissors"))
+    playerSelection = z.toLowerCase()
     
     if (computerSelection == playerSelection) 
     {result = "draw";}
@@ -25,15 +26,19 @@ function playRound(playerSelection, computerSelection) {
     {result = "you lose";}
 
     else if (playerSelection == "paper" && computerSelection == "scissors")
-    {result = "you loe";}
+    {result = "you lose";}
 
     else if (playerSelection == "scissors" && computerSelection == "rock")
     {result = "you lose";}
 
    
-    return (result)
+    console.log(result)
 
 }
 
-playRound()
+function game() {
+    for (var i = 1; i < 6; i++) 
+    playRound()
+}
 
+game()
