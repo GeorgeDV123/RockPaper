@@ -1,4 +1,4 @@
-function getComputerChoice(x) {
+function g1etComputerChoice(x) {
 
     if (x == 0)
         return ("rock");
